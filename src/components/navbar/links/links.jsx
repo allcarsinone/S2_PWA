@@ -1,29 +1,25 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const Links = () => {
     const links = [
         {
-            name: "Home",
-            href: "/"
-        }, 
-        {
-            name: "Sobre nós",
-            href: "/sobre-nos"
+            title: "Home",
+            path: "/",
         },
         {
-            name: "veiculos",
-            href: "/veiculos"
+            title: "Sobre nós",
+            path: "/sobre-nos",
         },
         {
-            name: "admin",
-            href: "/admin"
+            title: "Veiculos",
+            path: "/veiculos",
         }
     ];
 
     return (
         <div>
             {links.map((link) => (
-                <Link href={link.href} key={link.name}>{link.name}</Link>
+                <Link key={link.title} href={link.path}>{link.title}</Link>
             ))}
         </div>
     )
